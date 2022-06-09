@@ -1,16 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="pl.lublin.wsei.java.cwiczenia.lab5.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.lublin.wsei.java.cwiczenia.lab5.Controller">
+    <children>
+        <Label layoutX="39.0" layoutY="14.0" text="Nobliści">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+        <ListView fx:id="lvNoblisci" layoutX="39.0" layoutY="34.0" prefHeight="449.0" prefWidth="364.0" />
+      <Text layoutX="437.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rok przyznania nagrody" wrappingWidth="181.078125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfRok" editable="false" layoutX="437.0" layoutY="59.0" prefHeight="25.0" prefWidth="323.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="438.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dziedzina" wrappingWidth="181.078125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfDziedzina" editable="false" layoutX="438.0" layoutY="138.0" prefHeight="25.0" prefWidth="323.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="438.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kraj pochodzenia noblisty" wrappingWidth="181.078125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfKraj" editable="false" layoutX="437.0" layoutY="217.0" prefHeight="25.0" prefWidth="323.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="438.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Motywacja nagrody" wrappingWidth="181.078125">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfMotywacja" editable="false" layoutX="438.0" layoutY="299.0" prefHeight="25.0" prefWidth="323.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="509.0" layoutY="393.0" mnemonicParsing="false" onAction="#btnExport" prefHeight="31.0" prefWidth="181.0" text="Export">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
