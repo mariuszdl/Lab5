@@ -27,7 +27,7 @@ public class Controller {
         noblisciList = new NoblisciList();
 
         for(Noblista nb: noblisciList.noblisci) {
-            tytuly.add(nb.dataRow + " " + nb.imie + " " + nb.nazwisko);
+            tytuly.add(nb.imie + " " + nb.nazwisko);
         }
         lvNoblisci.setItems(tytuly);
 

@@ -11,12 +11,13 @@ public class Noblista {
 
     public Noblista(String tekst) {
         String[] items = tekst.split(",(?=\\S)");
-        dataRow = items[0];
+        dataRow = tekst;
         imie = items[1];
         nazwisko = items[2];
         rok = items[12];
         kategoria = items[13];
         uzasadnienie = items[16];
+        uzasadnienie = uzasadnienie.replace("\"", "");
         if(items.length > 19) {
             kraj = items[19];
         }
