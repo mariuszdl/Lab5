@@ -66,11 +66,10 @@ public class Controller {
             Parent root = loader.load();
             Export export = loader.getController();
 
-
             Stage stage = new Stage();
             stage.setTitle("Export");
             stage.setResizable(false);
-            stage.setScene(new Scene(root, 600, 400));
+            stage.setScene(new Scene(root, 443, 277));
             stage.show();
 
         } catch (IOException e) {
