@@ -6,8 +6,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -56,6 +61,20 @@ public class Controller {
     }
 
     public void btnExport(ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("export.fxml"));
+            Parent root = loader.load();
+            Export export = loader.getController();
 
+
+            Stage stage = new Stage();
+            stage.setTitle("Export");
+            stage.setResizable(false);
+            stage.setScene(new Scene(root, 600, 400));
+            stage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
