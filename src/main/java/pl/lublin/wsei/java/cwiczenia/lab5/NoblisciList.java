@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class NoblisciList {
+    public static String header;
     public ArrayList<Noblista> noblisci;
 
     public NoblisciList() throws IOException {
@@ -19,6 +20,8 @@ public class NoblisciList {
             while ((line = in.readLine()) != null) {
                 if (line.charAt(0) != 'i') {
                     noblisci.add(new Noblista(line));
+                } else {
+                    header = line;
                 }
             }
         } catch (IOException e) {
